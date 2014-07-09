@@ -22,9 +22,10 @@ func KthFibonacci(k uint64) func() uint64 {
 		return a
 	}
 }
+
 func main() {
 
-	n, _ := strconv.Atoi(os.Args[1])
+	n, _ := strconv.ParseUint(os.Args[1], 10, 0)
 	k, _ := strconv.ParseUint(os.Args[2], 10, 0)
 
 	fibGenerator := KthFibonacci(k)
