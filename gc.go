@@ -4,7 +4,6 @@ import (
 	"bufio"
 	"fmt"
 	"os"
-	//"strings"
 )
 
 const (
@@ -14,8 +13,6 @@ const (
 )
 
 func main() {
-
-	//Read file and move content to the map stringID -> dnaString
 
 	file, err := os.Open(os.Args[1])
 	if err != nil {
@@ -38,7 +35,6 @@ func main() {
 			dnaMap[currentKey] += line
 		}
 	}
-	// Go throw map and search max gcRate
 
 	var maxPercent float64 = 0.0
 	var maxId string
