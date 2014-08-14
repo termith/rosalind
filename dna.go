@@ -17,22 +17,22 @@ import (
 	"os"
 )
 
+var (
+	A_counter int = 0
+	C_counter int = 0
+	G_counter int = 0
+	T_counter int = 0
+)
+
+const (
+	A   byte = 65
+	C   byte = 67
+	G   byte = 71
+	T   byte = 84
+	EOF byte = 10
+)
+
 func main() {
-
-	var (
-		A_counter int = 0
-		C_counter int = 0
-		G_counter int = 0
-		T_counter int = 0
-	)
-
-	const (
-		A   byte = 65
-		C   byte = 67
-		G   byte = 71
-		T   byte = 84
-		EOF byte = 10
-	)
 
 	dna, err := ioutil.ReadFile(os.Args[1])
 	if err != nil {
