@@ -15,7 +15,10 @@ import (
 	"os"
 )
 
+const NEW_STRING byte = 10
+
 var hammDistance int = 0
+
 
 func main() {
 
@@ -27,7 +30,7 @@ func main() {
 		panic(err)
 	}
 	for i, n := range dnaArray {
-		if n == 10 {
+		if n == NEW_STRING {
 			firstString = dnaArray[0:i]
 			secondString = dnaArray[i+1:]
 			break
